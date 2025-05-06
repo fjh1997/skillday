@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:24.04
 
 RUN useradd -m ctf
 
@@ -9,8 +9,8 @@ RUN chmod +x /root/setup.sh
 RUN /root/setup.sh
 RUN rm /root/setup.sh
 
-RUN cp -R /lib* /home/ctf && \
-    cp -R /usr/lib* /home/ctf
+
+cp -R /usr/lib* /home/ctf
 
 RUN mkdir /home/ctf/dev && \
     mknod /home/ctf/dev/null c 1 3 && \
