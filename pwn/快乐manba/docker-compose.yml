@@ -1,0 +1,6 @@
+services:
+  pwn:
+    build: .
+    ports:
+      - "9003:9999"
+    restart: always
