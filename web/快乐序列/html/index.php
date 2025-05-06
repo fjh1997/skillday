@@ -1,5 +1,7 @@
 <?php
 highlight_file(__FILE__);
+include "flag.php";
+
 class SecretKeeper {
     private $key;
     public $data;
@@ -11,10 +13,8 @@ class SecretKeeper {
     
     public function __destruct() {
         if ($this->key === "Sup3rS3cr3tK3y!") {
-            $filename = '/flag.txt';
-            if (file_exists($filename)) {
-                echo file_get_contents($filename);
-            }
+            echo "拿去flag：".$flag;
+
         }
     }
     public function __toString() {
