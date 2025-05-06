@@ -10,7 +10,7 @@ RUN /root/setup.sh
 RUN rm /root/setup.sh
 
 
-cp -R /usr/lib* /home/ctf
+RUN cp -R /usr/lib* /home/ctf
 
 RUN mkdir /home/ctf/dev && \
     mknod /home/ctf/dev/null c 1 3 && \
