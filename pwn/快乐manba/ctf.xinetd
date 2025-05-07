@@ -8,9 +8,9 @@ service ctf
     type        = UNLISTED
     port        = 9999
     bind        = 0.0.0.0
-    server      = /usr/sbin/chroot
+    server      = /bin/bash
     # replace helloworld to your program
-    server_args = --userspec=1001:1001 /home/ctf ./run.sh
+    server_args = -c "chroot --userspec=1001:1001 /home/ctf ./run.sh 2>&1"
     banner_fail = /etc/banner_fail
     per_source	= 5
     rlimit_cpu	= 3
