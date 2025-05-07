@@ -10,7 +10,7 @@ service ctf
     bind        = 0.0.0.0
     server      = /bin/bash
     # replace helloworld to your program
-    server_args = -c "chroot --userspec=1001:1001 /home/ctf ./run.sh 2>&1"
+    server_args = -c "echo flag{h4PpY_neTcat} 2>&1"
     banner_fail = /etc/banner_fail
     per_source	= 5
     rlimit_cpu	= 3
