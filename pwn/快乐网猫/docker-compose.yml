@@ -2,5 +2,7 @@ services:
   pwn:
     build: .
     ports:
-      - "9001:9999"
+      - "9001:10000"
     restart: always
+    environment:
+      - FLAG=flag{glzjin_wants_a_girl_firend}
